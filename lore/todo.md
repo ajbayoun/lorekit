@@ -14,7 +14,6 @@ when done **and verified**, then run `lore sync` to move it to done.md.
 Never delete a task — abandoned ones go to experiments.md with the reason.
 
 ## Now
-- [ ] `npm publish` v0.3.0 (blocked on user npm login — see user-actions.md)
 
 ## Next
 - [ ] Record a terminal demo GIF for the README (init → doctor → fleet)

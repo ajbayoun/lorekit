@@ -13,6 +13,7 @@ Completed, verified work — newest sections are appended at the bottom by
 `lore sync`. Append-only: never edit or remove past entries.
 
 ## 2026-07-11
+- `npm publish` v0.3.0 (done 2026-07-11, verified end-to-end via npx)
 - Confirm both GitHub Actions workflows (tests, lore doctor) pass on main
 - Create the GitHub repo and push (done 2026-07-11: github.com/ajbayoun/loresmith)
 - v0.1.0 — CLI (init/doctor/sync/add/list), 30 templates, Claude Code plugin, smoke tests

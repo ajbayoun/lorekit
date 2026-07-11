@@ -15,9 +15,9 @@ moment you hit one (with enough detail that the user can act without asking),
 and move completed items to the bottom section.
 
 ## Open
-- [ ] `npm login` + `npm publish` to claim the `loresmith` package name
-  (verified free on 2026-07-11 — squatters exist, don't sit on it).
+(none — all clear)
 
 ## Completed
+- [x] 2026-07-11 — Published to npm: `loresmith@0.3.0` (verified via npx from a clean dir).
 - [x] 2026-07-11 — GitHub repo created and pushed: https://github.com/ajbayoun/loresmith
 - [x] 2026-07-11 — Username resolved: `ajbayoun`; all repo links updated.

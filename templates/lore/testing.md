@@ -1,6 +1,7 @@
 ---
 doc: testing
 title: Testing
+summary: How to run tests and what "tested" means
 last-verified: {{DATE}}
 read-when: before claiming any task is done; writing or fixing tests
 update-when: the test setup, commands, or coverage expectations change

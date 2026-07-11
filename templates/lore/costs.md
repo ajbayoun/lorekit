@@ -1,6 +1,7 @@
 ---
 doc: costs
 title: Costs & budget
+summary: Recurring costs and spending rules for agents
 last-verified: {{DATE}}
 read-when: adding any paid service, API, or infrastructure; estimating a feature
 update-when: a recurring cost starts/stops or a spending limit changes

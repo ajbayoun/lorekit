@@ -29,6 +29,8 @@
     "integrations": { "file": "integrations.md", "tier": "full" },
     "release": { "file": "release.md", "tier": "full" },
     "compliance": { "file": "compliance.md", "tier": "full" },
-    "session-log": { "file": "session-log.md", "tier": "full" }
+    "session-log": { "file": "session-log.md", "tier": "full" },
+    "ui-ux": { "file": "guides/ui-ux.md", "tier": "guide" },
+    "backend": { "file": "guides/backend.md", "tier": "guide" }
   }
 }

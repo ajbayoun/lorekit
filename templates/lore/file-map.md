@@ -1,6 +1,7 @@
 ---
 doc: file-map
 title: File map
+summary: What lives where, and placement rules
 last-verified: {{DATE}}
 read-when: first session in the repo; deciding where new code belongs
 update-when: top-level directories are added, removed, or repurposed

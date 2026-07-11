@@ -1,6 +1,7 @@
 ---
 doc: setup
 title: Setup & install
+summary: Zero-to-running install steps
 last-verified: {{DATE}}
 read-when: working in a fresh environment; anything fails with "not found" errors
 update-when: prerequisites, install steps, or run commands change

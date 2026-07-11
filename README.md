@@ -35,15 +35,83 @@ That's the **core** tier — deliberately small, because an agent facing 30
 docs reads none of them well. When the project grows:
 
 ```
-npx lorekit init --full     # all 30 docs
+npx lorekit init --full     # all 32 docs
 npx lorekit add security costs deployment    # or cherry-pick
 ```
 
 The full tier adds: features, known-issues, **experiments** (dead ends — the
 anti-rework file), glossary, file-map, testing, verify, setup, deployment
 (Docker/K8s), environments, security, design, brand, personas, metrics,
-costs, dependencies, data-model, api, integrations, release, compliance, and
-a session-log for agent-to-agent handoffs.
+costs, dependencies, data-model, api, integrations, release, compliance, a
+session-log for agent-to-agent handoffs — and the pre-filled **guides**
+(below).
+
+## Fleet mode — hundreds of agents, one repo
+
+Shared list files are merge-conflict factories: a hundred agents can't all
+edit `todo.md`. Fleet mode replaces every shared list with **one file per
+thing**:
+
+```bash
+npx lorekit fleet init      # tasks/, sessions/, and the protocol doc
+```
+
+- `lore/tasks/T-0042-fix-login.md` — one file per task, with status,
+  priority, zone, and dependencies in frontmatter. Existing todo.md items
+  migrate automatically (Now→high, Next→normal, Later→low).
+- **The claim loop**: each agent runs
+  `lore task next --claim --by agent-07`, commits the claim alone, and
+  pushes. Git's push race is the lock — **first push wins**, the loser
+  rebases and claims the next task. No server, no daemon, works across any
+  number of worktrees or machines.
+- `task next` is scheduler-smart: it skips tasks with unmet dependencies,
+  picks by priority, and prefers **zones** (frontend/api/db/infra) where no
+  other agent has an active claim — so parallel agents naturally spread out
+  instead of colliding.
+- `lore/sessions/<date>-<agent>.md` — per-agent handoff notes, zero append
+  collisions.
+- `lore/fleet.md` — the protocol every agent reads first: claiming, zones,
+  stuck-claim recovery, merge etiquette.
+- `lore doctor` polices the fleet: dead claims (claimed 24h+ ago), duplicate
+  ids, unknown or **circular dependencies**, and zone pileups.
+
+Everything speaks `--json`, so orchestrators can drive it programmatically.
+
+## Making smaller models punch above their weight
+
+Strong models infer a repo's unwritten rules; smaller ones can't — but they
+follow explicit instructions extremely well. lorekit converts inference into
+instructions:
+
+- **Playbooks** — `lore playbook add "add an API endpoint"` captures a
+  recipe: preconditions, a golden-example file to copy, exact numbered
+  steps, a verify command, and a common-failures table. An expensive model
+  writes it once; a cheap model executes it forever.
+- **`lore digest`** — compiles the `summary:` line of every doc into a
+  one-page brief (rules short-form + doc map + fleet board + human
+  blockers). Small-context models start here instead of reading the tree.
+- **Guides** (below) — taste, written down as checkable rules.
+
+## Detailed guides: UI/UX and backend
+
+Unlike project docs (facts about *your* repo, born empty), guides ship
+**pre-filled with opinionated best practices** and are edited per project:
+
+- `lore/guides/ui-ux.md` — spacing scale, type hierarchy, WCAG contrast
+  numbers, the **five states rule** (loading/empty/error/partial/ideal),
+  form validation timing, touch targets, motion durations, a ship-blocking
+  accessibility checklist.
+- `lore/guides/backend.md` — REST conventions and status codes, one error
+  envelope, validate-at-the-boundary, N+1 and index discipline, additive
+  migrations, idempotency keys, job retry rules, structured logging,
+  security non-negotiables, p95 budgets.
+
+```bash
+npx lorekit add ui-ux backend    # or included in --full
+```
+
+Each ends with a "Project overrides" section — deviations are written down,
+not vibed.
 
 ## The ideas that make it work
 
@@ -77,6 +145,10 @@ map rows pointing at files that no longer exist.
 | `lore sync` | Move `[x]` tasks from todo.md to done.md under today's date |
 | `lore touch <doc...> \| all \| agents` | Bump `last-verified` after re-checking a doc against the code |
 | `lore add <doc...> \| all` | Install more docs — and auto-insert their rows into the AGENTS.md read map |
+| `lore fleet init` | Convert the repo for multi-agent work: tasks/, sessions/, protocol doc; migrates todo.md |
+| `lore task add\|list\|next\|claim\|done\|reopen\|show` | The fleet task system — `next --claim --by <agent>` is the scheduler; `--json` everywhere |
+| `lore playbook add\|list` | Capture step-by-step recipes that weaker models follow exactly |
+| `lore digest` | One-page brief: rules + doc summaries + fleet board — for small contexts |
 | `lore link [copilot gemini windsurf cline]` | Pointer files so other AI tools read AGENTS.md too |
 | `lore ci` | GitHub Actions workflow that runs doctor on every PR |
 | `lore list` | Installed vs available docs, with verification dates |

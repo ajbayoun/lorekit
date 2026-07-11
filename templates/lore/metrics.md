@@ -1,6 +1,7 @@
 ---
 doc: metrics
 title: Metrics & success criteria
+summary: KPIs and performance budgets
 last-verified: {{DATE}}
 read-when: prioritizing work; doing performance work; answering "is it working"
 update-when: a KPI, target, or performance budget is set or changed

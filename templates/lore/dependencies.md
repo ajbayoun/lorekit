@@ -1,6 +1,7 @@
 ---
 doc: dependencies
 title: Dependencies
+summary: Key libraries, why chosen, and upgrade policy
 last-verified: {{DATE}}
 read-when: adding, upgrading, or replacing a library
 update-when: a key dependency is added or removed — record the WHY

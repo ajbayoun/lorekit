@@ -1,6 +1,7 @@
 ---
 doc: deployment
 title: Deployment
+summary: Where this runs and how to ship it
 last-verified: {{DATE}}
 read-when: touching Docker, Kubernetes, CI/CD, or anything that ships to a server
 update-when: infrastructure, images, manifests, or the deploy path change

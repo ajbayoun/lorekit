@@ -1,6 +1,7 @@
 ---
 doc: verify
 title: Verification checklist
+summary: The checklist a task must pass to count as done
 last-verified: {{DATE}}
 read-when: before marking any todo task [x] or telling the user something works
 update-when: the definition of "verified" changes for this project

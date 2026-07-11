@@ -1,6 +1,7 @@
 ---
 doc: integrations
 title: Integrations
+summary: Third-party services and webhook contracts
 last-verified: {{DATE}}
 read-when: touching any third-party service, webhook, or external API
 update-when: an integration is added, changed, or removed

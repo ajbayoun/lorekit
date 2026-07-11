@@ -1,6 +1,7 @@
 ---
 doc: design
 title: Design considerations
+summary: Design principles and patterns for this product's UI
 last-verified: {{DATE}}
 read-when: doing any UI/UX work — layout, components, interactions, copy
 update-when: a design principle or pattern is decided (record big ones in decisions.md too)

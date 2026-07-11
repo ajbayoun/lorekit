@@ -1,7 +1,7 @@
 {
   "name": "lorekit",
   "description": "Give your repo a memory: scaffold and maintain the lore/ docs AI agents read, follow, and keep up to date.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Adnan Bayoun"
   }

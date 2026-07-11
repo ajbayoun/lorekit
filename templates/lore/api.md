@@ -1,6 +1,7 @@
 ---
 doc: api
 title: API contracts
+summary: Endpoint map and API conventions
 last-verified: {{DATE}}
 read-when: adding or changing endpoints; consuming the API from a client
 update-when: a contract changes — breaking changes also need a decisions.md entry

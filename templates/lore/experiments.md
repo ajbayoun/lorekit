@@ -1,6 +1,7 @@
 ---
 doc: experiments
 title: Experiments & dead ends
+summary: Approaches tried and abandoned — don't re-walk dead ends
 last-verified: {{DATE}}
 read-when: before proposing an approach — it may already have been tried and killed
 update-when: an approach, library, or feature is tried and abandoned — append-only

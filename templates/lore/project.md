@@ -1,6 +1,7 @@
 ---
 doc: project
 title: Project charter
+summary: Mission, goals, and non-goals — why this project exists
 last-verified: {{DATE}}
 read-when: starting any session; answering "why does this exist" or scope questions
 update-when: the mission, goals, or scope change — with the user's explicit agreement

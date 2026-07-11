@@ -1,6 +1,7 @@
 ---
 doc: personas
 title: Users & personas
+summary: Who the users are and who they're not
 last-verified: {{DATE}}
 read-when: making UX, copy, or prioritization decisions
 update-when: you learn something real about who uses this and what they need

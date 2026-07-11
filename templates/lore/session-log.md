@@ -1,6 +1,7 @@
 ---
 doc: session-log
 title: Session log
+summary: Recent agent sessions and handoffs
 last-verified: {{DATE}}
 read-when: starting a session — read the LAST entry to pick up where the previous agent left off
 update-when: end of every agent session — append, never edit past entries

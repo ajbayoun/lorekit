@@ -1,6 +1,7 @@
 ---
 doc: compliance
 title: Legal & compliance
+summary: License, user data, and legal obligations
 last-verified: {{DATE}}
 read-when: handling user data, adding dependencies, or publishing anything
 update-when: a legal obligation is discovered or a policy is set

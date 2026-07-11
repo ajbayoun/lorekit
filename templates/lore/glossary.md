@@ -1,6 +1,7 @@
 ---
 doc: glossary
 title: Glossary
+summary: Domain terms and the exact words to use
 last-verified: {{DATE}}
 read-when: naming anything (code, UI copy, docs); reading unfamiliar domain terms
 update-when: a new domain term or entity appears, or a term's meaning is refined

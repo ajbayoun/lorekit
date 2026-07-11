@@ -1,6 +1,7 @@
 ---
 doc: release
 title: Release process
+summary: Versioning, release steps, and rollback
 last-verified: {{DATE}}
 read-when: cutting a release, publishing a version, or writing a changelog
 update-when: the versioning scheme or release steps change

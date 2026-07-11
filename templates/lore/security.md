@@ -1,6 +1,7 @@
 ---
 doc: security
 title: Security considerations
+summary: Sensitive data, auth model, and standing security rules
 last-verified: {{DATE}}
 read-when: touching auth, user input, secrets, uploads, or network boundaries
 update-when: a threat, control, or sensitive-data flow changes

@@ -1,6 +1,7 @@
 ---
 doc: features
 title: Features
+summary: What the product does today, and what's planned
 last-verified: {{DATE}}
 read-when: doing product or feature work; answering "does it do X"
 update-when: a feature ships, changes behavior, or is cut

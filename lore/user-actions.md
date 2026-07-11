@@ -2,7 +2,7 @@
 doc: user-actions
 title: User actions needed
 summary: Open items only the human can do
-last-verified: {{DATE}}
+last-verified: 2026-07-11
 read-when: at the start and end of every session — remind the user of open items
 update-when: you discover something only the human can do; the human completes an item
 ---
@@ -15,7 +15,12 @@ moment you hit one (with enough detail that the user can act without asking),
 and move completed items to the bottom section.
 
 ## Open
-- [ ] _FILL_ME_
+- [ ] Create the GitHub repo `adnanbayoun/lorekit` and push `main` (or say
+  the word and an agent can run `gh repo create` if `gh` is authenticated).
+- [ ] `npm login` + `npm publish` to claim the `lorekit` package name
+  (verified free on 2026-07-11 — squatters exist, don't sit on it).
+- [ ] Decide the GitHub username/org if not `adnanbayoun` — README and
+  package.json repository links assume it.
 
 ## Completed
 (move finished items here with the date)

@@ -1,6 +1,7 @@
 ---
 doc: known-issues
 title: Known issues
+summary: Active bugs, fragile areas, and workarounds
 last-verified: {{DATE}}
 read-when: debugging anything; before declaring something broken or fixing "weird" code
 update-when: a bug is found, worked around, or fixed (move fixed ones to the bottom)

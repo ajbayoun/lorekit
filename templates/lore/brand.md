@@ -1,6 +1,7 @@
 ---
 doc: brand
 title: Brand & theme
+summary: Colors, type, naming, and voice
 last-verified: {{DATE}}
 read-when: producing anything visual or user-facing — UI, diagrams, docs, marketing copy
 update-when: colors, type, naming, or voice are decided or changed

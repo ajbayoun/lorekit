@@ -1,6 +1,7 @@
 ---
 doc: decisions
 title: Decision log
+summary: Settled choices and their reasoning — do not re-litigate
 last-verified: {{DATE}}
 read-when: before proposing an approach, library, or architecture change
 update-when: a meaningful choice is settled with the user — append-only, supersede don't delete

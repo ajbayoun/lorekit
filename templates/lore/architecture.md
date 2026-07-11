@@ -1,6 +1,7 @@
 ---
 doc: architecture
 title: Architecture
+summary: Components, data flow, and boundaries that must not be crossed
 last-verified: {{DATE}}
 read-when: making any change that touches structure, boundaries, or data flow
 update-when: components, boundaries, or data flow change — same commit as the code

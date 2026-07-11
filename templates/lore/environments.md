@@ -1,6 +1,7 @@
 ---
 doc: environments
 title: Environments & config
+summary: Environments, env var names, and secrets policy
 last-verified: {{DATE}}
 read-when: touching configuration, env vars, or anything environment-specific
 update-when: an env var is added/removed or an environment URL changes

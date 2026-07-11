@@ -1,6 +1,7 @@
 ---
 doc: conventions
 title: Conventions
+summary: Code style, git rules, and hard constraints
 last-verified: {{DATE}}
 read-when: before writing or reviewing any code, commit, or branch
 update-when: a convention is adopted or changed (record it in decisions.md too)

@@ -1,13 +1,13 @@
 ---
 doc: agents
 title: Agent operating manual
-last-verified: {{DATE}}
-lore-version: {{TOOL_VERSION}}
+last-verified: 2026-07-11
+lore-version: 0.3.0
 ---
 
-# {{PROJECT_NAME}} — Agent Operating Manual
+# lorekit — Agent Operating Manual
 
-You are an AI agent working in **{{PROJECT_NAME}}**. Stack: {{STACK}}.
+You are an AI agent working in **lorekit**. Stack: Node.js, GitHub Actions.
 
 This file is a **router, not a summary**. Do not read every doc in `lore/` —
 read this file, then open only the docs matched to your current task in the
@@ -15,7 +15,15 @@ read map below.
 
 ## Read map
 
-{{MANIFEST_TABLE}}
+| Doc | Read it when | Update it when |
+| --- | --- | --- |
+| [`lore/project.md`](lore/project.md) — Project charter | starting any session; answering "why does this exist" or scope questions | the mission, goals, or scope change — with the user's explicit agreement |
+| [`lore/architecture.md`](lore/architecture.md) — Architecture | making any change that touches structure, boundaries, or data flow | components, boundaries, or data flow change — same commit as the code |
+| [`lore/todo.md`](lore/todo.md) — To-do | starting a session; choosing what to work on next | a task is added, finished ([x]), or re-scoped |
+| [`lore/done.md`](lore/done.md) — Done | checking whether something was already built; writing changelogs or status updates | lore sync moves completed tasks here (grouped by date) — append-only |
+| [`lore/decisions.md`](lore/decisions.md) — Decision log | before proposing an approach, library, or architecture change | a meaningful choice is settled with the user — append-only, supersede don't delete |
+| [`lore/conventions.md`](lore/conventions.md) — Conventions | before writing or reviewing any code, commit, or branch | a convention is adopted or changed (record it in decisions.md too) |
+| [`lore/user-actions.md`](lore/user-actions.md) — User actions needed | at the start and end of every session — remind the user of open items | you discover something only the human can do; the human completes an item |
 
 ## Lifecycle rules
 

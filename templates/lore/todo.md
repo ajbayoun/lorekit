@@ -1,6 +1,7 @@
 ---
 doc: todo
 title: To-do
+summary: Current task list — what to work on next
 last-verified: {{DATE}}
 read-when: starting a session; choosing what to work on next
 update-when: a task is added, finished ([x]), or re-scoped

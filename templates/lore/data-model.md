@@ -1,6 +1,7 @@
 ---
 doc: data-model
 title: Data model
+summary: Entities, schema, and migration rules
 last-verified: {{DATE}}
 read-when: touching the schema, queries, or anything that persists data
 update-when: the schema changes — same commit as the migration

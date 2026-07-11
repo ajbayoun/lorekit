@@ -21,7 +21,7 @@ task system with git as the lock; weaker models perform like stronger ones
 because the repo's judgment is written down in playbooks and guides.
 
 ## Goals (current)
-1. Publish to GitHub (`adnanbayoun/lorekit`) and npm (`lorekit`).
+1. Publish to GitHub (`ajbayoun/lorekit`) and npm (`lorekit`).
 2. Keep the CLI zero-dependency and instant via `npx`.
 3. Dogfood: this repo's own lore stays clean under `lore doctor` in CI.
 

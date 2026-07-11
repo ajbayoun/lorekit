@@ -20,9 +20,9 @@
     "test": "node test/smoke.js",
     "prepublishOnly": "npm test"
   },
-  "homepage": "https://github.com/adnanbayoun/lorekit#readme",
+  "homepage": "https://github.com/ajbayoun/lorekit#readme",
   "bugs": {
-    "url": "https://github.com/adnanbayoun/lorekit/issues"
+    "url": "https://github.com/ajbayoun/lorekit/issues"
   },
   "keywords": [
     "ai",
@@ -41,6 +41,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adnanbayoun/lorekit.git"
+    "url": "git+https://github.com/ajbayoun/lorekit.git"
   }
 }

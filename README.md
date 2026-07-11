@@ -182,7 +182,7 @@ npm i -g lorekit             # or global: lore <command>
 ### As a Claude Code plugin
 
 ```
-/plugin marketplace add adnanbayoun/lorekit
+/plugin marketplace add ajbayoun/lorekit
 /plugin install lorekit@lorekit
 ```
 

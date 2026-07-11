@@ -34,8 +34,9 @@ These rules are not optional. They are how this repo keeps its memory.
    (architecture, data model, conventions, file map…), fix that doc in the same
    commit as the code change. A stale doc is worse than no doc.
 4. **Bump `last-verified`.** Whenever you read a lore doc and confirm it still
-   matches reality, update its `last-verified` frontmatter date. `lore doctor`
-   flags docs nobody has verified recently.
+   matches reality, update its `last-verified` frontmatter date — `lore touch
+   <doc>` does it for you. `lore doctor` flags docs nobody has verified since
+   the repo last changed. Never bump a date you didn't actually verify.
 5. **Never invent placeholder content.** `_FILL_ME_` means the human hasn't
    answered yet. Ask them — do not guess and fill it in silently.
 6. **Human tasks go to `lore/user-actions.md`.** Anything only the user can do
@@ -55,4 +56,5 @@ These rules are not optional. They are how this repo keeps its memory.
 ## Health check
 
 Run `npx lorekit doctor` (or `lore doctor` if installed) to find stale docs,
-unfilled placeholders, and unsynced tasks. Fix what it reports.
+unfilled placeholders, read-map drift, and unsynced tasks. Fix what it
+reports. Use `--json` when you want to parse the result.

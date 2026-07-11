@@ -1,6 +1,6 @@
 {
   "name": "lorekit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Give any repo a memory. One command scaffolds the markdown docs AI agents read, follow, and keep up to date — with lifecycle rules, staleness checks, and a todo→done workflow.",
   "bin": {
     "lore": "bin/lore.js"
@@ -17,7 +17,12 @@
     "node": ">=16"
   },
   "scripts": {
-    "test": "node test/smoke.js"
+    "test": "node test/smoke.js",
+    "prepublishOnly": "npm test"
+  },
+  "homepage": "https://github.com/adnanbayoun/lorekit#readme",
+  "bugs": {
+    "url": "https://github.com/adnanbayoun/lorekit/issues"
   },
   "keywords": [
     "ai",

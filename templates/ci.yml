@@ -1,0 +1,20 @@
+name: lore doctor
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+jobs:
+  doctor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history: doctor's staleness check compares last-verified
+          # dates against git commit dates.
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx -y lorekit doctor

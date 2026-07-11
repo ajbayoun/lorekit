@@ -57,19 +57,48 @@ append-only and superseded rather than deleted, docs are updated in the same
 commit as the code that changed them, and `_FILL_ME_` means *ask the human,
 never guess*.
 
-**Staleness is measurable.** Every doc carries a `last-verified` date in its
-frontmatter. Agents bump it when they confirm a doc still matches reality,
-and `lore doctor` flags anything nobody has verified in 30 days.
+**Staleness is measurable — and git-aware.** Every doc carries a
+`last-verified` date in its frontmatter. Agents bump it when they confirm a
+doc still matches reality (`lore touch <doc>`), and `lore doctor` flags
+anything unverified past the age limit. Crucially, a doc only counts as stale
+if the repo has **commits newer than its verification date** — a dormant
+project doesn't nag you.
+
+**The doctor also catches structural drift:** docs sitting in `lore/` that the
+AGENTS.md read map doesn't route to (agents would never find them), and read
+map rows pointing at files that no longer exist.
 
 ## Commands
 
 | Command | What it does |
 | --- | --- |
 | `lore init [--full] [--force] [--name X]` | Scaffold docs; detects your stack, auto-adds deployment.md if Docker is present |
-| `lore doctor [--max-age <days>]` | Flag stale docs, unfilled `_FILL_ME_` placeholders, unsynced tasks (non-zero exit — CI-friendly) |
+| `lore doctor [--max-age <days>] [--json]` | Flag stale docs, unfilled `_FILL_ME_` placeholders, read-map drift, unsynced tasks. Non-zero exit; `--json` for machines |
 | `lore sync` | Move `[x]` tasks from todo.md to done.md under today's date |
-| `lore add <doc...> \| all` | Install more docs later |
+| `lore touch <doc...> \| all \| agents` | Bump `last-verified` after re-checking a doc against the code |
+| `lore add <doc...> \| all` | Install more docs — and auto-insert their rows into the AGENTS.md read map |
+| `lore link [copilot gemini windsurf cline]` | Pointer files so other AI tools read AGENTS.md too |
+| `lore ci` | GitHub Actions workflow that runs doctor on every PR |
 | `lore list` | Installed vs available docs, with verification dates |
+
+## Works with every agent tool
+
+`AGENTS.md` is the [emerging cross-tool standard](https://agents.md) — Cursor,
+Codex, and others read it natively, and `lore init` adds a `CLAUDE.md` pointer
+for Claude Code. For the rest, `lore link` drops one-line pointer files:
+`.github/copilot-instructions.md` (GitHub Copilot), `GEMINI.md` (Gemini CLI),
+`.windsurfrules` (Windsurf), and `.clinerules` (Cline). One knowledge base,
+every tool.
+
+## Enforce it in CI
+
+```bash
+lore ci
+```
+
+adds a workflow that runs `lorekit doctor` on every PR — stale docs, unfilled
+placeholders, and read-map drift fail the build. Documentation debt becomes as
+visible as failing tests.
 
 ## Install
 

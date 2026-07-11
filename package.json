@@ -1,0 +1,41 @@
+{
+  "name": "lorekit",
+  "version": "0.1.0",
+  "description": "Give any repo a memory. One command scaffolds the markdown docs AI agents read, follow, and keep up to date — with lifecycle rules, staleness checks, and a todo→done workflow.",
+  "bin": {
+    "lore": "bin/lore.js"
+  },
+  "files": [
+    "bin",
+    "templates",
+    "commands",
+    ".claude-plugin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "node test/smoke.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "agents-md",
+    "claude",
+    "claude-code",
+    "cursor",
+    "codex",
+    "documentation",
+    "scaffold",
+    "cli",
+    "developer-tools"
+  ],
+  "author": "Adnan Bayoun",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adnanbayoun/lorekit.git"
+  }
+}

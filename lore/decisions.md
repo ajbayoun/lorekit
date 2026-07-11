@@ -37,6 +37,16 @@ in manifest.json (two sources of truth).
 **Why:** "Lore" = the accumulated knowledge of a project; short command.
 **Rejected:** `lore` as package name (taken on npm), `agentdocs` (generic).
 
+## 2026-07-11 — Renamed to loresmith (supersedes "Name: lorekit")
+**Decision:** npm package and GitHub repo are `loresmith`; CLI command stays
+`lore`.
+**Why:** npm rejected `lorekit` at publish time — typosquat rule against the
+existing `lore-kit` package (E403 "name too similar"). `loresmith` and
+`lore-smith` are both unclaimed, so no similarity rule can fire.
+**Rejected:** `lorebook`/`gitlore`/`lorekeeper`/`codelore` (taken, or blocked
+by the same similarity rule), scoped `@ajbayoun/lorekit` (worse npx
+ergonomics, weaker brand).
+
 ## 2026-07-11 — Tiers: core is small on purpose
 **Decision:** Default init installs 8 docs; `--full` installs all 32;
 guides are a separate tier (`lore add ui-ux backend`).

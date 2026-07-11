@@ -1,11 +1,11 @@
 {
-  "name": "lorekit",
+  "name": "loresmith",
   "owner": {
     "name": "Adnan Bayoun"
   },
   "plugins": [
     {
-      "name": "lorekit",
+      "name": "loresmith",
       "source": "./",
       "description": "Give your repo a memory: scaffold and maintain the lore/ docs AI agents read, follow, and keep up to date."
     }

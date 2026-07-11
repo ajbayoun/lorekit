@@ -15,6 +15,6 @@ three lines beats three paragraphs nobody reads.
 ---
 
 ## {{DATE}} — lore initialized
-**Did:** Scaffolded lore docs (lorekit {{TOOL_VERSION}}).
+**Did:** Scaffolded lore docs (loresmith {{TOOL_VERSION}}).
 **Mid-flight:** Templates contain `_FILL_ME_` placeholders awaiting the user.
 **Next:** Interview the user to fill in project.md, architecture.md, todo.md.

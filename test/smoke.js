@@ -9,7 +9,7 @@ const os = require('os');
 const path = require('path');
 
 const BIN = path.join(__dirname, '..', 'bin', 'lore.js');
-const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lorekit-test-'));
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'loresmith-test-'));
 
 let failures = 0;
 function check(name, fn) {
@@ -164,7 +164,7 @@ check('ci writes a GitHub Actions workflow', () => {
   const out = lore(['ci']);
   const wf = path.join(tmp, '.github', 'workflows', 'lore-doctor.yml');
   assert(fs.existsSync(wf), 'workflow file missing');
-  assert(fs.readFileSync(wf, 'utf8').includes('lorekit doctor'), 'workflow does not run doctor');
+  assert(fs.readFileSync(wf, 'utf8').includes('loresmith doctor'), 'workflow does not run doctor');
   assert(out.includes('created'), 'no created output');
 });
 
@@ -190,7 +190,7 @@ check('list shows installed and available docs', () => {
 
 // ---------- fleet mode ----------
 
-const ftmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lorekit-test-fleet-'));
+const ftmp = fs.mkdtempSync(path.join(os.tmpdir(), 'loresmith-test-fleet-'));
 
 check('fleet init migrates todo.md into the task system', () => {
   loreIn(ftmp, ['init', '--name', 'fleetproj']);
@@ -314,7 +314,7 @@ check('digest prints rules, docs, and the fleet board', () => {
 });
 
 check('doctor staleness is git-aware (quiet repos stay quiet)', () => {
-  const gtmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lorekit-test-git-'));
+  const gtmp = fs.mkdtempSync(path.join(os.tmpdir(), 'loresmith-test-git-'));
   const run = (cmd, args, env = {}) =>
     execFileSync(cmd, args, { cwd: gtmp, encoding: 'utf8', env: { ...process.env, ...env } });
   run('git', ['init', '-q']);
@@ -342,7 +342,7 @@ check('doctor staleness is git-aware (quiet repos stay quiet)', () => {
 });
 
 check('full init installs every doc, including ready-to-use guides', () => {
-  const tmp2 = fs.mkdtempSync(path.join(os.tmpdir(), 'lorekit-test-full-'));
+  const tmp2 = fs.mkdtempSync(path.join(os.tmpdir(), 'loresmith-test-full-'));
   execFileSync('node', [BIN, 'init', '--full'], { cwd: tmp2, encoding: 'utf8' });
   const manifest = JSON.parse(
     fs.readFileSync(path.join(__dirname, '..', 'templates', 'manifest.json'), 'utf8')

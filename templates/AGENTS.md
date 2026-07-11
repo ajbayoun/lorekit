@@ -57,9 +57,9 @@ These rules are not optional. They are how this repo keeps its memory.
 
 ## Health check
 
-Run `npx lorekit doctor` (or `lore doctor` if installed) to find stale docs,
+Run `npx loresmith doctor` (or `lore doctor` if installed) to find stale docs,
 unfilled placeholders, read-map drift, and unsynced tasks. Fix what it
 reports. Use `--json` when you want to parse the result.
 
-If your context is tight, start with `npx lorekit digest` — a one-page brief
+If your context is tight, start with `npx loresmith digest` — a one-page brief
 of the rules, the docs, and (in fleet mode) the task board.

@@ -1,4 +1,4 @@
-# lorekit
+# loresmith
 
 **Give your repo a memory.**
 
@@ -12,7 +12,7 @@ with **lifecycle rules** they follow, **staleness checks** you can run, and a
 [`AGENTS.md`](https://agents.md) (Claude Code, Codex, Cursor, and friends).
 
 ```
-npx lorekit init
+npx loresmith init
 ```
 
 ## What you get
@@ -35,8 +35,8 @@ That's the **core** tier — deliberately small, because an agent facing 30
 docs reads none of them well. When the project grows:
 
 ```
-npx lorekit init --full     # all 32 docs
-npx lorekit add security costs deployment    # or cherry-pick
+npx loresmith init --full     # all 32 docs
+npx loresmith add security costs deployment    # or cherry-pick
 ```
 
 The full tier adds: features, known-issues, **experiments** (dead ends — the
@@ -53,7 +53,7 @@ edit `todo.md`. Fleet mode replaces every shared list with **one file per
 thing**:
 
 ```bash
-npx lorekit fleet init      # tasks/, sessions/, and the protocol doc
+npx loresmith fleet init      # tasks/, sessions/, and the protocol doc
 ```
 
 - `lore/tasks/T-0042-fix-login.md` — one file per task, with status,
@@ -80,7 +80,7 @@ Everything speaks `--json`, so orchestrators can drive it programmatically.
 ## Making smaller models punch above their weight
 
 Strong models infer a repo's unwritten rules; smaller ones can't — but they
-follow explicit instructions extremely well. lorekit converts inference into
+follow explicit instructions extremely well. loresmith converts inference into
 instructions:
 
 - **Playbooks** — `lore playbook add "add an API endpoint"` captures a
@@ -107,7 +107,7 @@ Unlike project docs (facts about *your* repo, born empty), guides ship
   security non-negotiables, p95 budgets.
 
 ```bash
-npx lorekit add ui-ux backend    # or included in --full
+npx loresmith add ui-ux backend    # or included in --full
 ```
 
 Each ends with a "Project overrides" section — deviations are written down,
@@ -168,22 +168,22 @@ every tool.
 lore ci
 ```
 
-adds a workflow that runs `lorekit doctor` on every PR — stale docs, unfilled
+adds a workflow that runs `loresmith doctor` on every PR — stale docs, unfilled
 placeholders, and read-map drift fail the build. Documentation debt becomes as
 visible as failing tests.
 
 ## Install
 
 ```bash
-npx lorekit <command>        # no install
-npm i -g lorekit             # or global: lore <command>
+npx loresmith <command>        # no install
+npm i -g loresmith             # or global: lore <command>
 ```
 
 ### As a Claude Code plugin
 
 ```
-/plugin marketplace add ajbayoun/lorekit
-/plugin install lorekit@lorekit
+/plugin marketplace add ajbayoun/loresmith
+/plugin install loresmith@loresmith
 ```
 
 Then use `/lore-init` (scaffolds **and interviews you** to fill the docs in),
@@ -197,7 +197,7 @@ tell your agent:
 > Read AGENTS.md, explore the repo, pre-fill every lore placeholder you can
 > verify from the code, then interview me for the rest.
 
-Add `npx lorekit doctor` to CI if you want stale docs to fail the build.
+Add `npx loresmith doctor` to CI if you want stale docs to fail the build.
 
 ## License
 

@@ -7,7 +7,7 @@ Turn work you just did (or are about to explain) into a reusable recipe:
 1. Identify the repeatable operation — e.g. "add an API endpoint", "add a
    database migration", "create a new screen". If `$ARGUMENTS` names one,
    use that.
-2. Run `npx -y lorekit playbook add <operation name>`.
+2. Run `npx -y loresmith playbook add <operation name>`.
 3. Fill the generated file in `lore/playbooks/` from what actually happened
    in this session, not from theory:
    - **Golden example**: the best existing file that shows the finished

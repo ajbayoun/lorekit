@@ -1,5 +1,5 @@
 {
-  "name": "lorekit",
+  "name": "loresmith",
   "version": "0.3.0",
   "description": "Give any repo a memory. One command scaffolds the markdown docs AI agents read, follow, and keep up to date — with lifecycle rules, staleness checks, and a todo→done workflow.",
   "bin": {
@@ -20,9 +20,9 @@
     "test": "node test/smoke.js",
     "prepublishOnly": "npm test"
   },
-  "homepage": "https://github.com/ajbayoun/lorekit#readme",
+  "homepage": "https://github.com/ajbayoun/loresmith#readme",
   "bugs": {
-    "url": "https://github.com/ajbayoun/lorekit/issues"
+    "url": "https://github.com/ajbayoun/loresmith/issues"
   },
   "keywords": [
     "ai",
@@ -41,6 +41,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ajbayoun/lorekit.git"
+    "url": "git+https://github.com/ajbayoun/loresmith.git"
   }
 }

@@ -5,9 +5,9 @@ last-verified: 2026-07-11
 lore-version: 0.3.0
 ---
 
-# lorekit — Agent Operating Manual
+# loresmith — Agent Operating Manual
 
-You are an AI agent working in **lorekit**. Stack: Node.js, GitHub Actions.
+You are an AI agent working in **loresmith**. Stack: Node.js, GitHub Actions.
 
 This file is a **router, not a summary**. Do not read every doc in `lore/` —
 read this file, then open only the docs matched to your current task in the
@@ -65,9 +65,9 @@ These rules are not optional. They are how this repo keeps its memory.
 
 ## Health check
 
-Run `npx lorekit doctor` (or `lore doctor` if installed) to find stale docs,
+Run `npx loresmith doctor` (or `lore doctor` if installed) to find stale docs,
 unfilled placeholders, read-map drift, and unsynced tasks. Fix what it
 reports. Use `--json` when you want to parse the result.
 
-If your context is tight, start with `npx lorekit digest` — a one-page brief
+If your context is tight, start with `npx loresmith digest` — a one-page brief
 of the rules, the docs, and (in fleet mode) the task board.

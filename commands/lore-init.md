@@ -4,7 +4,7 @@ description: Scaffold lore docs (AGENTS.md + lore/) in this repo, then interview
 
 Initialize lore in the current repository, then fill it with real content:
 
-1. Run `npx -y lorekit init` (add `--full` if the user asked for the full doc
+1. Run `npx -y loresmith init` (add `--full` if the user asked for the full doc
    set, `$ARGUMENTS` may contain flags to pass through). Show the user what
    was created.
 2. Read the generated AGENTS.md so you know the lifecycle rules.
@@ -14,7 +14,7 @@ Initialize lore in the current repository, then fill it with real content:
 4. For everything you cannot know from code — mission, goals, personas,
    budget, brand — interview the user with short, concrete questions. A few
    at a time, not a wall of questions. Write their answers into the docs.
-5. Finish by running `npx -y lorekit doctor` and reporting what is still open.
+5. Finish by running `npx -y loresmith doctor` and reporting what is still open.
 
 Never guess placeholder content. `_FILL_ME_` that you can't verify from the
 repo stays until the user answers.

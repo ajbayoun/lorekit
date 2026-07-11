@@ -13,6 +13,7 @@ Completed, verified work — newest sections are appended at the bottom by
 `lore sync`. Append-only: never edit or remove past entries.
 
 ## 2026-07-11
+- Confirm both GitHub Actions workflows (tests, lore doctor) pass on main
 - Create the GitHub repo and push (done 2026-07-11: github.com/ajbayoun/lorekit)
 - v0.1.0 — CLI (init/doctor/sync/add/list), 30 templates, Claude Code plugin, smoke tests
 - v0.2.0 — git-aware doctor, touch, link, ci, --json, self-updating read map

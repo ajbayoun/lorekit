@@ -14,8 +14,8 @@ when done **and verified**, then run `lore sync` to move it to done.md.
 Never delete a task — abandoned ones go to experiments.md with the reason.
 
 ## Now
-- [ ] Create the GitHub repo and push (blocked on user — see user-actions.md)
 - [ ] `npm publish` v0.3.0 (blocked on user npm login — see user-actions.md)
+- [ ] Confirm both GitHub Actions workflows (tests, lore doctor) pass on main
 
 ## Next
 - [ ] Record a terminal demo GIF for the README (init → doctor → fleet)

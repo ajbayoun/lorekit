@@ -15,6 +15,10 @@ with **lifecycle rules** they follow, **staleness checks** you can run, and a
 npx loresmith init
 ```
 
+<p align="center">
+  <img src="demo.gif" alt="loresmith init walkthrough" width="800">
+</p>
+
 ## What you get
 
 ```
